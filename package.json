@@ -1,11 +1,23 @@
 {
   "name": "unfollowtracker",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
+  "bin": {
+    "unfollowtracker": "./main.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "node main.js check",
+    "watch": "node main.js watch",
+    "status": "node main.js status",
+    "log": "node main.js log"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "CLI that tracks Instagram follower/following changes over time",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "discord.js": "^14.26.5",
+    "dotenv": "^17.4.2",
+    "instagram-private-api": "1.46.1"
+  }
 }
